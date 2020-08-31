@@ -41,3 +41,6 @@ body {
 }
 
 /*end home page styles*/
+
+/* DateTimePicker issue */
+@-moz-document url-prefix() {   .fix-position-moz-DateTimePicker > div > input{     bottom: 7px !important;   } }

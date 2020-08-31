@@ -13,14 +13,20 @@
     "@types/react-router-dom": "^5.1.5",
     "@types/uuid": "^8.0.0",
     "axios": "^0.19.2",
+    "date-fns": "^2.0.0-alpha.13",
+    "final-form": "^4.20.0",
     "mobx": "^5.15.4",
     "mobx-react-lite": "^2.0.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-final-form": "^6.3.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
+    "react-scripts": "^3.4.3",
     "react-toastify": "^6.0.8",
-    "semantic-ui-react": "^0.88.2",
+    "react-widgets": "^4.4.11",
+    "react-widgets-date-fns": "^4.0.26",
+    "revalidate": "^1.2.0",
+    "semantic-ui-react": "^0.88.1",
     "typescript": "^3.7.5",
     "uuid": "^8.2.0"
   },
@@ -45,5 +51,8 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/react-widgets": "^4.4.2",
+    "@types/revalidate": "^1.1.2"
+  }
 }
