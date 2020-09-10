@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using System;
 using Application.Errors;
 using System.Net;
-using System.Text.Json;
+using Newtonsoft.Json;
 
 namespace API.Middleware
 {
@@ -38,7 +38,7 @@ namespace API.Middleware
             switch (ex)
             {
                 case RestException re:
-                    logger.LogError(ex, "REST ERROR");
+                    logger.LogError(ex, re.Errors.ToString() + " ------- REST ERROR aa ----------" + re.Code.ToString());
                     errors = re.Errors;
                     context.Response.StatusCode = (int)re.Code;
                     break;
@@ -54,7 +54,7 @@ namespace API.Middleware
 
             if (errors != null)
             {
-                var result = JsonSerializer.Serialize(new
+                var result = JsonConvert.SerializeObject(new
                 {
                     errors
                 });
